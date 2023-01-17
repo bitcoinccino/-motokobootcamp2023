@@ -18,13 +18,15 @@
 
   //  4- Write two functions **set_counter** & **get_counter** 
 
-  public func set_counter (n: Nat) : async Nat{
-    return n;
+  var counter : Nat = 0;
+    public func set_counter (n: Nat) {
+    counter := n;
   };
 
-  public func get_counter() : async Nat  {
-      set_counter();
+  public func get_counter() : async Nat {
+     return counter;
   };
+
 
 
   // 5- Write a function **test_divide** that takes two natural numbers n and m and returns a boolean indicating if n divides m
